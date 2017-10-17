@@ -1,0 +1,25 @@
+<!--<div fxLayout="column">
+    <p>
+        Seleccionador de imagenes!!
+    </p>
+    <form #userForm="ngForm" (ngSubmit)="setUser()">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Usuario"  [(ngModel)]="user" name = "user">
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.form.valid"> Iniciar</button>        
+    </form>
+</div>-->
+
+
+<h2 mat-dialog-title>Ingresar</h2>
+<mat-dialog-content>Seleccionador de imagenes!!</mat-dialog-content>
+
+<mat-dialog-actions fxLayout="column" fxLayoutAlign="center center">
+    <form #userForm="ngForm" (ngSubmit)="setUser()" fxLayout="column" fxLayoutAlign="center stretch">
+        <mat-form-field>
+            <input matInput placeholder="Usuario"  [(ngModel)]="user" name = "user" required>
+        </mat-form-field>
+
+        <button mat-button  color="primary" type="submit" [disabled]="!userForm.form.valid">Iniciar</button>
+    </form>
+</mat-dialog-actions>

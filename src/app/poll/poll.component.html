@@ -1,0 +1,32 @@
+<div  fxlayout="row" fxlayout.sm="column" fxlayout.xs="column" fxLayoutAlign="center center">
+    <div class="containerPic" fxLayoutAlign="center center">
+        <img [src]="dataLeft" (click)="saveVote(dataLeft)" *ngIf="dataLeft!=''">  
+        <mat-spinner *ngIf="dataLeft===''"></mat-spinner>
+        <div class="overlay" *ngIf="dataRigth!=''" >
+            <div class="middle">
+                <button mat-raised-button color="primary" (click)="saveVote(dataRigth)">Seleccionar</button>
+
+            </div>
+        </div>
+    </div>
+    <h2>VS</h2>
+    <div class="containerPic"  fxLayoutAlign="center center">
+        <img [src]="dataRigth"  *ngIf="dataRigth!=''"> 
+        <mat-spinner *ngIf="dataRigth===''" ></mat-spinner >
+        <div class="overlay" *ngIf="dataRigth!=''" >
+            <div class="middle">
+                <button mat-raised-button color="primary" (click)="saveVote(dataRigth)">Seleccionar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div *ngIf="afAuth.authState | async; let user; else showLogin">
+      <h1>Hello {{ user.displayName }}!</h1>
+      <button (click)="logout()">Logout</button>
+    </div>
+    <ng-template #showLogin>
+      <p>Please login.</p>
+      <button (click)="login()">Login with Google</button>
+    </ng-template>
+<div *ngFor="let item of items | async"> {{item.user}}</div>-->

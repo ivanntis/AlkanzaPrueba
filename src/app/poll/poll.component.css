@@ -1,0 +1,36 @@
+.containerPic{
+    width: 400px;
+    height: 300px
+}
+
+h2{
+    padding: 20px;
+    background: #6A37B4;
+    border-radius: 50%;
+    margin: 10px;
+    color: #fff;
+}
+
+.containerPic:hover .overlay {
+  opacity: 0.9;
+}
+
+
+.middle {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.overlay {
+  position:  absolute;
+  width: 400px;
+  height: 300px;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: #ffc107;
+}
